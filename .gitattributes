@@ -1,0 +1,35 @@
+# === Padronização de finais de linha ===
+* text=auto eol=lf
+
+# === Arquivos de código ===
+*.js      text eol=lf
+*.json    text eol=lf
+*.ts      text eol=lf
+*.md      text eol=lf
+*.html    text eol=lf
+*.css     text eol=lf
+*.yml     text eol=lf
+*.yaml    text eol=lf
+*.sh      text eol=lf
+
+# === Cypress ===
+cypress/**/*.js   text eol=lf
+cypress/**/*.json text eol=lf
+
+# === Arquivos de configuração ===
+.gitattributes text eol=lf
+.gitignore     text eol=lf
+*.config.js    text eol=lf
+*.env.json     text eol=lf
+
+# === Binários (não normalizar) ===
+*.png     binary
+*.jpg     binary
+*.jpeg    binary
+*.gif     binary
+*.ico     binary
+*.mp4     binary
+*.mov     binary
+*.pdf     binary
+*.zip     binary
+*.exe     binary
