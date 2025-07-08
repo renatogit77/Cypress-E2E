@@ -64,5 +64,25 @@ describe('Testes da API Barriga REST', () => {
             });
         })
 
+        it('Não deve criar conta com mesmo nome', () => {
+            cy.request({
+                method: 'POST',
+                url: '/contas',
+                headers: {
+                    Authorization: `JWT ${token}`
+                },
+                body: {
+                    nome: 'Conta mesmo nome'
+                },
+                failOnStatusCode: false // Permite que o teste continue mesmo se a requisição falhar
+            }).as('response')
+        
+            cy.get('@response').then((res) => {
+                console.log('Body da resposta:', res.body);
+                expect(res.status).to.be.equal(400);
+                expect(res.body.error).to.be.equal('Já existe uma conta com esse nome!');
+            });
+        })
+
     })
 })
