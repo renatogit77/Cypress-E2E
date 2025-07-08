@@ -2,7 +2,7 @@
 
 describe('Work with alerts', () => {
     beforeEach(() => {
-        cy.visit('https://wcaquino.me/cypress/componentes.html')
+        cy.visit('http://wcaquino.me/cypress/componentes.html')
     })
 
     beforeEach(() =>{
@@ -18,13 +18,13 @@ describe('Work with alerts', () => {
     })
 
     it('Preenche campo nome', () => {
-        cy.get('#formNome').type('Renato')
-        cy.get('#formNome').should('have.value', 'Renato')
+        cy.get('#formNome').type('Harry')
+        cy.get('#formNome').should('have.value', 'Harry')
     })
 
     it('Preenche campo sobrenome', () => {
-        cy.get('#formSobrenome').type('Rumor')
-        cy.get('#formSobrenome').should('have.value', 'Rumor')
+        cy.get('#formSobrenome').type('Potter')
+        cy.get('#formSobrenome').should('have.value', 'Potter')
     })
 
     it('Selecionao sexo', () => {
@@ -37,11 +37,11 @@ describe('Work with alerts', () => {
     })
 
     it('Valida cadastro', () => {
-        cy.get('#formNome').type('Renato')
-        cy.get('#formNome').should('have.value', 'Renato')
+        cy.get('#formNome').type('Harry')
+        cy.get('#formNome').should('have.value', 'Harry')
 
-        cy.get('#formSobrenome').type('Trouxa')
-        cy.get('#formSobrenome').should('have.value', 'Trouxa')
+        cy.get('#formSobrenome').type('Potter')
+        cy.get('#formSobrenome').should('have.value', 'Potter')
 
         cy.get('#formSexoFem')
         .click()
